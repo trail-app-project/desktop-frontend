@@ -1,1 +1,9 @@
-/*# sourceMappingURL=Nav.css.map */
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  background-color: purple;
+  color: white;
+  gap: 1rem;
+  padding: 1rem;
+}/*# sourceMappingURL=Nav.css.map */

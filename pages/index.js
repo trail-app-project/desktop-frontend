@@ -17,13 +17,12 @@ export default function Main() {
         <meta name="Trail App" content="Trail App website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <body>
+      <body>
+        <main>
           <Nav />
           <Home />
-          <Footer />
-        </body>
-      </main>
+        </main>
+      </body>
     </div>
   )
 }
