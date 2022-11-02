@@ -8,23 +8,17 @@ import { IoLogInOutline } from 'react-icons/io5'
 const Nav = () => {
   return (
     <nav>
-    <a>
-      <Link href="./Login">
-        <IoLogInOutline />
-        Login
-      </Link>
-      </a>
-      <a>
+        <Link href="./Login">
+          <IoLogInOutline />
+          Login
+        </Link>
         <Link href='./Register'>
           Register
         </Link>
-      </a>
-      <a>
-      <Link href='./Recovery'>
-        Forgot password
-        <BsQuestion />
-      </Link>
-      </a>
+        <Link href='./Recovery'>
+          Forgot password
+          <BsQuestion />
+        </Link>
     </nav>
   )
 }
