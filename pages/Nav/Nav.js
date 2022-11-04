@@ -2,24 +2,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Button from '../Components/Button'
 
-import { BsQuestion } from 'react-icons/bs'
-import { IoLogInOutline } from 'react-icons/io5'
 const Nav = () => {
   return (
-    <nav>
+    <>
+      <nav>
         <Link href="./Login">
-          <IoLogInOutline />
-          Login
+          <Button label="Login" />
         </Link>
         <Link href='./Register'>
-          Register
+          <Button label="Register"/>
         </Link>
         <Link href='./Recovery'>
-          Forgot password
-          <BsQuestion />
+          <Button label="Forgot Password?"/>
         </Link>
     </nav>
+    <div className='banner'/>
+    </>
+    
   )
 }
 
