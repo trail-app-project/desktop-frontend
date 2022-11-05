@@ -5,7 +5,6 @@ import Dashboard from './Dashboard/'
 import Footer from './Footer/'
 import Home from './Home/'
 import Login from './Login/'
-import Nav from './Nav/'
 import Recovery from './Recovery/'
 import Register from './Register/'
 
@@ -18,7 +17,6 @@ export default function Main() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
         <main>
-          <Nav />
           <Home />
         </main>
     </div>
