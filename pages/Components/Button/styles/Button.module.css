@@ -35,25 +35,25 @@
   color: var(--main-color);
 }
 .outline :hover {
-  background-color: #3777d1;
-  border-color: #3777d1;
+  background-color: var(--main-color);
+  border-color: var(--contrast-color);
   color: #fff;
 }
 
 .basic {
   background-color: orange;
-  border-color: #3777d1;
+  border-color: var(--main-color);
   color: #fff;
 }
 .basic:hover {
   background-color: #fff;
   border-color: #fff;
-  color: #3777d1;
+  color: var(--contrast-color);
 }
 
 .link {
   background-color: transparent;
-  color: #4c4c4c;
+  color: white;
   box-shadow: none;
 }
 .link:hover {

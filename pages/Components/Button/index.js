@@ -62,8 +62,6 @@ class Button extends Component{
                 [disabledClassName]: disabled
             }
         );
-
-        
         return (
         <div onClick={this.handleButtonClick} className={_className}>
             {this.renderChildren()}
