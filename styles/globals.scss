@@ -1,6 +1,9 @@
 :root{
   --main-color: #fdf2de;
-  --contrast-color: #4c5c6b;
+  --contrast-color: rgb(76, 92, 107);
+  --orange: #F6A03B;
+  --orange-dark:#EB6F57;
+  
 }
 
 html,
@@ -10,6 +13,7 @@ body {
   background-color: var(--main-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  transform-origin: 50% 50%;
 }
 
 a {

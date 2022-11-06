@@ -34,6 +34,7 @@
   border-color: var(--main-color);
   color: var(--main-color);
 }
+
 .outline :hover {
   background-color: var(--main-color);
   border-color: var(--contrast-color);
@@ -41,10 +42,11 @@
 }
 
 .basic {
-  background-color: orange;
+  background-color: var(--orange);
   border-color: var(--main-color);
   color: #fff;
 }
+
 .basic:hover {
   background-color: #fff;
   border-color: #fff;
@@ -56,6 +58,7 @@
   color: white;
   box-shadow: none;
 }
+
 .link:hover {
   color: #40a9ff;
   background-color: transparent;
@@ -66,6 +69,7 @@
   border-color: rgb(186, 186, 186);
   color: #4c4c4c;
 }
+
 .secondary:hover {
   background-color: #eee;
   border-color: #eee;
@@ -76,6 +80,7 @@
   border-color: #2fcb53;
   color: #fff;
 }
+
 .primary:hover {
   background-color: #48dd84;
   border-color: #48dd84;
@@ -86,6 +91,7 @@
   background-color: rgb(214, 69, 64);
   border-color: rgb(214, 69, 64);
 }
+
 .danger:hover {
   background-color: rgb(208, 50, 45);
   border-color: rgb(208, 50, 45);
@@ -100,6 +106,7 @@
   cursor: not-allowed;
   border: 1px solid;
 }
+
 .disabled:hover {
   background-color: #fff;
   color: #bababa;

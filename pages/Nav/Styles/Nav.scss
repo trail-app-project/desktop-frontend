@@ -6,6 +6,11 @@ nav{
     background-color: var(--contrast-color);
     height: 6rem;
     justify-content: right;
+    filter: drop-shadow(0  1.5rem .5rem rgba(0, 0, 0, .5));
+    transition: .5s;
+    &:hover{
+        filter: drop-shadow(0  1.5rem 1rem rgba(0, 0, 0, .5));
+    }
     >div.buttons{
         display: flex;
         flex-direction: column;
@@ -26,10 +31,10 @@ nav{
 }
 .banner{
     top: 6rem;
-    z-index: 0;
+    z-index: 1;
     position: fixed;
     width: 100vw;
     height: 1rem;
-    background-color: orange;
-    filter: drop-shadow(0 .3rem .5rem black);
+    background-color: var(--orange-dark);
 }
+
