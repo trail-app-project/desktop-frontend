@@ -9,8 +9,8 @@ import styled from 'styled-components'
 import useDimensions from '../Components/hooks/useDimensions'
 
 const Nav = () => {
-  const [winHeight, setWinHeight] = useState()
-	const [winWidth, setWinWidth] = useState()
+  const [winHeight, setWinHeight] = useState();
+	const [winWidth, setWinWidth] = useState();
 
 	const handleWindowSizeChange = () => {
 		setWinWidth(window.innerWidth);
@@ -45,35 +45,33 @@ const Style = styled.div`
           }
       }
   }
-`
-  
+`;
+
   return (
     <>
-    <Style>
-      <Logo />
-    </Style>
-      <nav className='navbar'>
-        <div className='buttons'>
-          <div className='signing'>
-            <Link href="./Login">
-              <Button label="Login" size='large'/>
-            </Link>
-            <Link href='./Register'>
-              <Button label="Register" size='large'/>
-            </Link>
+      <Style>
+        <Logo />
+      </Style>
+        <nav className='navbar'>
+          <h1 className='title'>Trail</h1>
+          <div className='buttons'>
+            <div className='signing'>
+              <Link href="./Login">
+                <Button label="Login" size='large'/>
+              </Link>
+              <Link href='./Register'>
+                <Button label="Register" size='large'/>
+              </Link>
+            </div>
+            <div className='forgotpass'>
+              <Link href='./Recovery'>
+                <Button label="Forgot Password?" variant='link'/>
+              </Link>
+            </div>
           </div>
-          
-          <div className='forgotpass'>
-            <Link href='./Recovery'>
-              <Button label="Forgot Password?" variant='link'/>
-            </Link>
-          </div>
-        </div>
-        <div className='banner'/>       
-    </nav>
-    
+          <div className='banner'/>
+      </nav>
     </>
-    
   )
 }
 
