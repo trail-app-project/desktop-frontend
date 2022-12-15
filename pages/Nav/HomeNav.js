@@ -8,51 +8,35 @@ import Button from '../Components/Button'
 import styled from 'styled-components'
 import useDimensions from '../Components/hooks/useDimensions'
 
-const Nav = () => {
-  const [winHeight, setWinHeight] = useState();
-	const [winWidth, setWinWidth] = useState();
 
-	const handleWindowSizeChange = () => {
-		setWinWidth(window.innerWidth);
-	};
-
-	useEffect(() => {
-	setWinHeight(window.innerHeight);
-	setWinWidth(window.innerWidth);
-
-	window.addEventListener('resize', handleWindowSizeChange);
-		return () => {
-			window.removeEventListener('resize', handleWindowSizeChange);
-		};
-	}, [])
-
-const Style = styled.div`
-  #logo{
-      width: 150px;
-      z-index: 2;
-      display: flex;
-      position: absolute;
-      top: 2rem;
-      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
-      transform-origin: 50% 50%;
-      transform: translateX(${String((winWidth/2)-(150/2))+'px'});
-      &:hover{
-          .primary{
-              transform: rotate(180deg);
-          }
-          .secondary{
-              transform: rotate(-90deg);
-          }
-      }
+const NavStyle = styled.div`
+  nav{
+    width: ${props=> props.winWidth+'px'};
   }
 `;
 
+const LogoStyle = styled.div`
+  #logo{
+    transform: translateX(${props=>props.winWidth+'px'});
+  }
+`
+
+const Nav = () => {
+
+  const winWidth = useDimensions().winWidth
+  const navRef = useRef()
+
+  useEffect(() => {
+    console.log(navRef)
+  }, [navRef]);
+
   return (
-    <>
-      <Style>
+    <section className='navbar' ref={navRef}>
+      <LogoStyle winWidth={((winWidth/2)-(150/2))}>
         <Logo />
-      </Style>
-        <nav className='navbar'>
+      </LogoStyle>
+      <NavStyle winWidth={winWidth}>
+        <nav>
           <h1 className='title'>Trail</h1>
           <div className='buttons'>
             <div className='signing'>
@@ -70,8 +54,9 @@ const Style = styled.div`
             </div>
           </div>
           <div className='banner'/>
-      </nav>
-    </>
+        </nav>
+      </NavStyle>
+    </section>
   )
 }
 

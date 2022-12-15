@@ -2,7 +2,7 @@ nav{
     display: flex;
     position: fixed;
     z-index: 1;
-    width: 100vw;
+
     background-color: var(--contrast-color);
     height: 6rem;
     justify-content: right;
@@ -39,5 +39,23 @@ nav{
     width: 100vw;
     height: 1rem;
     background-color: var(--orange-dark);
+}
+
+#logo{
+    width: 150px;
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    top: 2rem;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
+    transform-origin: 50% 50%;
+    &:hover{
+        .primary{
+            transform: rotate(180deg);
+        }
+        .secondary{
+            transform: rotate(-90deg);
+        }
+    }
 }
 
