@@ -9,10 +9,7 @@ nav{
     filter: drop-shadow(0  1.5rem .5rem rgba(0, 0, 0, 0));
     transition: .5s;
     &:hover{
-        filter: drop-shadow(0  1.5rem 1rem rgba(0, 0, 0, .2));
-    }
-    >.title{
-        
+        filter: drop-shadow(0  1.5rem 1rem rgba(0, 0, 0, .2)); 
     }
     >div.buttons{
         display: flex;
@@ -57,5 +54,36 @@ nav{
             transform: rotate(-90deg);
         }
     }
+}
+
+.title.main{
+    top: 4vh;
+    z-index: 5;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    color: var(--contrast-color);
+    content:attr(title);
+    display:block;
+}
+
+.title.back1{  
+    top: 4vh;
+    z-index: 3;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    display:block;
+    color:var(--orange-dark);
+}
+
+.title.back2{
+    top: 4vh;
+    z-index: 3;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    display:block;
+    color:var(--orange);
 }
 

@@ -1,1 +1,14 @@
-/*# sourceMappingURL=Home.css.map */
+#home {
+  width: 100vh;
+  height: 100vw;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  align-self: center;
+  display: flex;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=Home.css.map */

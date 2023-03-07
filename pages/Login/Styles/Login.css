@@ -1,1 +1,27 @@
-/*# sourceMappingURL=Login.css.map */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login #box {
+  width: 30em;
+  height: 35em;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  margin: 50px;
+  align-items: center;
+}
+#login #box form {
+  display: block;
+  margin: 50px;
+  position: relative;
+}
+#login #box form > h1 {
+  text-align: center;
+}
+#login #box form > input {
+  display: block;
+  margin: 1em;
+  height: 2.5em;
+}/*# sourceMappingURL=Login.css.map */

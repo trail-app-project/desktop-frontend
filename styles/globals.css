@@ -17,6 +17,7 @@ body {
   background-color: var(--main-color);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   transform-origin: 50% 50%;
+  overflow-x: hidden;
 }
 
 a {
@@ -31,23 +32,4 @@ a {
 section {
   max-height: 100vh;
   max-width: 100vw;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: light;
-  }
-  body {
-    color: black;
-    background: white;
-  }
 }/*# sourceMappingURL=globals.css.map */

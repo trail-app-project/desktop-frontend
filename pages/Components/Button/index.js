@@ -1,74 +1,64 @@
 import cx from "classnames";
 import PropTypes from "prop-types";
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styles from "./styles/Button.module.css";
 
-class Button extends Component{
-    
-    static propTypes = {
-        onClick:           PropTypes.func,
-        children:          PropTypes.node,
-        variant:           PropTypes.string,
-        className:         PropTypes.string,
-        label:             PropTypes.string,
-        size:              PropTypes.string,
-        disabledClassName: PropTypes.string,
-        disabled:          PropTypes.bool
+function Button(props) {
+    const [isDisabled, setIsDisabled] = useState(props.disabled);
+  
+    const handleButtonClick = (event) => {
+      if (isDisabled) return;
+      props.onClick && props.onClick({ event });
     };
-
-    static defaultProps = {
-        className: "",
-        label: "",
-        size: "",
-        variant: "basic",
-        disabled: false,
-        disabledClassName: ""
+  
+    const renderChildren = () => {
+      const { label, children } = props;
+  
+      if (label) {
+        return label;
+      }
+      if (children) {
+        return children;
+      }
+      return "Button";
     };
-    
-    handleButtonClick = (event) =>{
-        const { onClick, disabled } = this.props;
-        if (disabled) return;
-        onClick && onClick({ event });
-    };
-    
-    renderChildren(){
-        const { label, children } = this.props;
-        
-        if (label) {
-            return label;
-        }
-        if (children) {
-            return children;
-        }
-        return "Button";
-    };
-    
-    render (){
-        const {
-            className,
-            size,
-            variant,
-            disabled,
-            disabledClassName
-        } = this.props;
-        
-        const _className = cx(
-            className,
-            styles[size],
-            styles.button,
-            styles[variant],
-            {
-                [styles.disabled]: disabled,
-                [disabledClassName]: disabled
-            }
-        );
-        return (
-        <div onClick={this.handleButtonClick} className={_className}>
-            {this.renderChildren()}
-        </div>
-        );
-    }
-    
-}
+  
+    const className = cx(
+      props.className,
+      styles[props.size],
+      styles.button,
+      styles[props.variant],
+      {
+        [styles.disabled]: isDisabled,
+        [props.disabledClassName]: isDisabled
+      }
+    );
+  
+    return (
+      <div onClick={handleButtonClick} className={className}>
+        {renderChildren()}
+      </div>
+    );
+  }
+  
+  Button.propTypes = {
+    onClick: PropTypes.func,
+    children: PropTypes.node,
+    variant: PropTypes.string,
+    className: PropTypes.string,
+    label: PropTypes.string,
+    size: PropTypes.string,
+    disabledClassName: PropTypes.string,
+    disabled: PropTypes.bool
+  };
+  
+  Button.defaultProps = {
+    className: "",
+    label: "",
+    size: "",
+    variant: "basic",
+    disabled: false,
+    disabledClassName: ""
+  };
 
 export default Button

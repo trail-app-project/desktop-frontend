@@ -52,4 +52,35 @@ nav > div.buttons > div.forgotpass {
 }
 #logo:hover .secondary {
   transform: rotate(-90deg);
+}
+
+.title.main {
+  top: 4vh;
+  z-index: 5;
+  position: absolute;
+  font-size: 100pt;
+  left: 3vw;
+  color: var(--contrast-color);
+  content: attr(title);
+  display: block;
+}
+
+.title.back1 {
+  top: 4vh;
+  z-index: 3;
+  position: absolute;
+  font-size: 100pt;
+  left: 3vw;
+  display: block;
+  color: var(--orange-dark);
+}
+
+.title.back2 {
+  top: 4vh;
+  z-index: 3;
+  position: absolute;
+  font-size: 100pt;
+  left: 3vw;
+  display: block;
+  color: var(--orange);
 }/*# sourceMappingURL=Nav.css.map */
