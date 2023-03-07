@@ -1,0 +1,28 @@
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #box{
+        width: 30em;
+        height: 35em;
+        position: relative;
+        border-radius: 1em;
+        box-shadow: 0 0.188em 1.550em rgb(156,156,156);
+        margin: 50px;
+        align-items: center;
+
+        form{
+            display: block;
+            margin: 50px;
+            position: relative;
+            >h1{
+                text-align: center;
+            }
+            >input{
+                display: block;
+                margin: 1em;
+                height:2.5em;
+            }
+        }
+    }
+}
