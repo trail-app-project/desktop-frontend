@@ -1,27 +1,53 @@
 #login {
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #4C5C6B;
+  height: 100vh;
 }
 #login #box {
-  width: 30em;
-  height: 35em;
+  z-index: 0;
+  width: 20em;
+  height: 25em;
   position: relative;
   border-radius: 1em;
-  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  box-shadow: 0 0.188em 1.55em #36434e;
   margin: 50px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #FDF2DE;
 }
-#login #box form {
-  display: block;
+
+.loginform {
   margin: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#login #box form > h1 {
+.loginform #login-title {
   text-align: center;
+  font-size: 2em;
 }
-#login #box form > input {
+.loginform .username, .loginform .password {
   display: block;
-  margin: 1em;
+  margin: 0.5em;
   height: 2.5em;
+}
+
+.buttons {
+  margin-bottom: 0.2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons .login, .buttons .signup {
+  margin: 0.5em;
+}
+.buttons .forgotpass {
+  margin-bottom: 0.5em;
 }/*# sourceMappingURL=Login.css.map */

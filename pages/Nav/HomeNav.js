@@ -62,7 +62,7 @@ const Nav = () => {
                 <Button label="Login" size='large'/>
               </Link>
               <Link href='./Register'>
-                <Button label="Register" size='large'/>
+                <Button label="Sign-Up" size='large'/>
               </Link>
             </div>
             <div className='forgotpass'>

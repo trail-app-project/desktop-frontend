@@ -1,4 +1,4 @@
-import Nav from './HomeNav'
+import Nav from './UserNav'
 
 const index = () => {
   return (

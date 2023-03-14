@@ -1,33 +1,51 @@
+import Image from "next/image";
+import Link from "next/link";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import Button from '../Components/Button'
+import styled from "styled-components";
+
+import Logo from "../../public/Logo";
+import Button from "../Components/Button";
+import useDimensions from "../Components/hooks/useDimensions";
+
+const NavStyle = styled.div`
+  nav {
+    width: ${(props) => props.winWidth + "px"};
+  }
+`;
+
+const LogoStyle = styled.div`
+  #logo {
+    transform: translateX(${(props) => props.winWidth + "px"});
+  }
+`;
 
 const Nav = () => {
-    return (
-        <>
-        <nav>
-        <div className='buttons'>
-            <div className='signing'>
-            <Link href="./Login">
-                <Button label="Login" size='large'/>
-            </Link>
-            <Link href='./Register'>
-                <Button label="Register" size='large'/>
-            </Link>
-            </div>
-            
-            <div className='forgotpass'>
-            <Link href='./Recovery'>
-                <Button label="Forgot Password?" variant='link'/>
-            </Link>
-            </div>
-        </div>       
-        </nav>
-        <div className='banner'/>
-        </>
-    )
-}
+  const winWidth = useDimensions().winWidth;
+  const back1 = useRef(null);
+  const back2 = useRef(null);
 
-export default Nav
+  useEffect(() => {}, []);
+
+  return (
+    <section className="navbar">
+      <LogoStyle winWidth={winWidth / 2 - 150 / 2}>
+        <Logo />
+      </LogoStyle>
+      <NavStyle winWidth={winWidth}>
+        <nav>
+          <div className="buttons">
+            <div className="signing">
+              <Link href="./Home">
+                <Button label="Logout" size="large" />
+              </Link>
+            </div>
+          </div>
+          <div className="banner" />
+        </nav>
+      </NavStyle>
+    </section>
+  );
+};
+
+export default Nav;
