@@ -1,8 +1,11 @@
 import React from 'react'
+import Nav from '../Nav/UserNav'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <section className="dashboard">
+      <Nav />
+    </section>
   )
 }
 

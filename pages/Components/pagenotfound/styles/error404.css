@@ -1,0 +1,27 @@
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 10rem;
+  color: #ff4f4f;
+  margin: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  color: #444;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+  color: #777;
+  margin-top: 1rem;
+}/*# sourceMappingURL=error404.css.map */

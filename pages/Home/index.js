@@ -1,9 +1,22 @@
-import Home from './Home'
+import React, { Suspense } from 'react';
+import Landing from './Landing';
 
-const index = () => {
+const Home = () => {
+  const Dashboard = React.lazy(() => import('../Dashboard'))
+
+  const isAuthenticated = 0;
+
   return (
-    <Home />
+    <section id='home'>
+      {isAuthenticated ? (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Dashboard />
+        </Suspense>
+      ) : (
+        <Landing />
+      )}
+    </section>
   )
 }
 
-export default index
+export default Home

@@ -9,13 +9,8 @@ import styled from 'styled-components';
 import Logo from '../../public/Logo';
 import Button from '../Components/Button';
 import useDimensions from '../Components/hooks/useDimensions';
+import { NavStyle } from "./Nav.styled";
 
-
-const NavStyle = styled.div`
-  nav{
-    width: ${props=> props.winWidth+'px'};
-  }
-`;
 
 const LogoStyle = styled.div`
   #logo{
@@ -51,6 +46,7 @@ const Nav = () => {
       <LogoStyle winWidth={((winWidth/2)-(150/2))}>
         <Logo />
       </LogoStyle>
+      
       <NavStyle winWidth={winWidth}>
       <h1 className='title main' onMouseEnter={onEnter} onMouseLeave={onLeave}> Trail </h1>
       <h1 className='title back1' > Trail </h1>

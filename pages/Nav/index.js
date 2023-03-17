@@ -1,9 +1,20 @@
-import Nav from './UserNav'
+import React, { Suspense } from 'react';
+import HomeNav from './HomeNav';
 
-const index = () => {
+const index = ({ isAuthenticated = 0}) => {
+  const UserNav = React.lazy(() => import('./UserNav'));
+
   return (
-    <Nav />
-  )
-}
+    <section id='navbar'>
+      {isAuthenticated ? (
+        <Suspense fallback={<div>Loading...</div>}>
+          <UserNav />
+        </Suspense>
+      ) : (
+        <HomeNav />
+      )}
+    </section>
+  );
+};
 
-export default index
+export default index;
