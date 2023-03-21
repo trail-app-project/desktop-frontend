@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Logo from "../../public/Logo";
 import Button from "../Components/Button";
 import useDimensions from "../Components/hooks/useDimensions";
-import { NavStyle } from "./Nav.styled";
+import { NavStyle } from "./Styles/Nav.styled";
 
 const LogoStyle = styled.div`
   #logo {
@@ -25,7 +25,7 @@ const Nav = () => {
   useEffect(() => {}, []);
 
   return (
-    <section className="navbar">
+    <>
       <LogoStyle winWidth={winWidth} logosize={logosize}>
         <Suspense fallback={<div>Loading...</div>}>
           <Logo />
@@ -33,7 +33,7 @@ const Nav = () => {
       </LogoStyle>
       
       <NavStyle winWidth={winWidth}>
-        <nav>
+        <div className="navbar">
           <div className="buttons">
             <div className="signing">
               <Link href="./Home">
@@ -42,9 +42,9 @@ const Nav = () => {
             </div>
           </div>
           <div className="banner" />
-        </nav>
+        </div>
       </NavStyle>
-    </section>
+    </>
   );
 };
 

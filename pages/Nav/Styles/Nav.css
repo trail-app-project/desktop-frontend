@@ -1,17 +1,17 @@
-nav {
+.navbar {
   display: flex;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   background-color: var(--contrast-color);
   height: 6rem;
   justify-content: right;
   filter: drop-shadow(0 1.5rem 0.5rem rgba(0, 0, 0, 0));
   transition: 0.5s;
 }
-nav:hover {
+.navbar:hover {
   filter: drop-shadow(0 1.5rem 1rem rgba(0, 0, 0, 0.2));
 }
-nav > div.buttons {
+.navbar > div.buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +19,13 @@ nav > div.buttons {
   margin-right: 3rem;
   align-self: center;
 }
-nav > div.buttons > div.signing {
+.navbar > div.buttons > div.signing {
   display: flex;
   gap: 0.5rem;
   flex-direction: row;
   align-items: center;
 }
-nav > div.buttons > div.forgotpass {
+.navbar > div.buttons > div.forgotpass {
   display: flex;
 }
 
@@ -40,9 +40,9 @@ nav > div.buttons > div.forgotpass {
 
 #logo {
   width: 150px;
-  z-index: 2;
+  z-index: 5;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 2rem;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
   transform-origin: 50% 50%;
@@ -52,35 +52,4 @@ nav > div.buttons > div.forgotpass {
 }
 #logo:hover .secondary {
   transform: rotate(-90deg);
-}
-
-.title.main {
-  top: 4vh;
-  z-index: 5;
-  position: absolute;
-  font-size: 100pt;
-  left: 3vw;
-  color: var(--contrast-color);
-  content: attr(title);
-  display: block;
-}
-
-.title.back1 {
-  top: 4vh;
-  z-index: 3;
-  position: absolute;
-  font-size: 100pt;
-  left: 3vw;
-  display: block;
-  color: var(--orange-dark);
-}
-
-.title.back2 {
-  top: 4vh;
-  z-index: 3;
-  position: absolute;
-  font-size: 100pt;
-  left: 3vw;
-  display: block;
-  color: var(--orange);
 }/*# sourceMappingURL=Nav.css.map */

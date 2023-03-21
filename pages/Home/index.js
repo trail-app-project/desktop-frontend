@@ -7,7 +7,7 @@ const Home = () => {
   const isAuthenticated = 0;
 
   return (
-    <section id='home'>
+    <div>
       {isAuthenticated ? (
         <Suspense fallback={<div>Loading...</div>}>
           <Dashboard />
@@ -15,7 +15,7 @@ const Home = () => {
       ) : (
         <Landing />
       )}
-    </section>
+    </div>
   )
 }
 

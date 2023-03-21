@@ -1,8 +1,8 @@
-import Register from './Register'
+import Signup from './Signup'
 
 const index = () => {
   return (
-    <Register />
+    <Signup />
   )
 }
 

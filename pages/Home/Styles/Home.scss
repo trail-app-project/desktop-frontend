@@ -20,3 +20,35 @@
 			background-color: rgba(253, 242, 222, 0.5); /* Transparent white */
 		}
 }
+
+
+.title.main{
+    top: 4vh;
+    z-index: 3;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    color: var(--contrast-color);
+    content:attr(title);
+    display:block;
+}
+
+.title.back2{
+    top: 4vh;
+    z-index: 2;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    display:block;
+    color:var(--orange);
+}
+
+.title.back1{  
+    top: 4vh;
+    z-index: 1;
+    position: absolute;
+    font-size: 100pt;
+    left: 3vw;
+    display:block;
+    color:var(--orange-dark);
+}

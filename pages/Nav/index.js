@@ -5,7 +5,7 @@ const index = ({ isAuthenticated = 0}) => {
   const UserNav = React.lazy(() => import('./UserNav'));
 
   return (
-    <section id='navbar'>
+    <nav>
       {isAuthenticated ? (
         <Suspense fallback={<div>Loading...</div>}>
           <UserNav />
@@ -13,7 +13,7 @@ const index = ({ isAuthenticated = 0}) => {
       ) : (
         <HomeNav />
       )}
-    </section>
+    </nav>
   );
 };
 
