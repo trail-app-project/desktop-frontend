@@ -1,25 +1,22 @@
 import { useRouter } from 'next/router';
 import { useContext, useEffect } from 'react';
-import { AuthContext } from '../../src/context/auth-context';
+import { useAuth } from '../../Components/hooks/useAuth';
 import Dashboard from './Dashboard';
 const Index = () => {
   const router = useRouter();
-  const authContext = useContext(AuthContext);
+  const { isAuthenticated } = useAuth();
 
   useEffect(() => {
-  // checks if the user is authenticated
-    const auth = async () => {
-      return await authContext.isUserAuthenticated()
+    console.log(isAuthenticated)
+    if (!isAuthenticated){
+      router.push("/")
     }
-    auth
-    ? router.push("/Dashboard")
-    : router.push("/");
-  }, []);
+  }, [isAuthenticated]);
+  
   return (
     <>
       <Dashboard />
     </>
-    
   )
 }
 

@@ -4,7 +4,7 @@ import Nav from '../../Components/Nav/UserNav';
 
 const Dashboard = () => {
   return (
-    <section >
+    <section className='dashboard'>
       <Nav />
       <div className="card-container">
         <Card className="card"/>

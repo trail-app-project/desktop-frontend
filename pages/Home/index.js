@@ -1,20 +1,22 @@
-import React, { Suspense } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { useAuth } from '../../Components/hooks/useAuth';
 import Landing from './Landing';
 
 const Home = () => {
-  const Dashboard = React.lazy(() => import('../Dashboard'))
 
-  const isAuthenticated = 0;
+  const router = useRouter();
+  const { isAuthenticated } = useAuth;
+
+  useEffect(() => {
+    if (isAuthenticated){
+      router.push("/Dashboard")
+    }
+  }, [isAuthenticated]);
 
   return (
     <div>
-      {isAuthenticated ? (
-        <Suspense fallback={<div>Loading...</div>}>
-          <Dashboard />
-        </Suspense>
-      ) : (
         <Landing />
-      )}
     </div>
   )
 }

@@ -35,9 +35,9 @@ function Button(props) {
     );
   
     return (
-      <div onClick={handleButtonClick} className={className}>
+      <button onClick={handleButtonClick} className={className}>
         {renderChildren()}
-      </div>
+      </button>
     );
   }
   

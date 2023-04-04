@@ -53,3 +53,22 @@
         margin-bottom: .5em;
     }
 }
+
+.invalid{
+    color: red;
+}
+.invalid.mail{
+    display: block;
+}
+
+.invalid.pass{
+    display: block;
+}
+
+.valid.pass{
+    display: none;
+}
+
+.valid.mail{
+    display: none;
+}
