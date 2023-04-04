@@ -7,8 +7,8 @@ import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import Logo from '../../public/Logo';
-import Button from '../Components/Button';
-import useDimensions from '../Components/hooks/useDimensions';
+import Button from '../Button';
+import useDimensions from '../hooks/useDimensions';
 import { NavStyle } from "./Styles/Nav.styled";
 
 

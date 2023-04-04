@@ -5,8 +5,8 @@ import React, { forwardRef, Suspense, useEffect, useRef, useState } from "react"
 import styled from "styled-components";
 
 import Logo from "../../public/Logo";
-import Button from "../Components/Button";
-import useDimensions from "../Components/hooks/useDimensions";
+import Button from "../Button";
+import useDimensions from "../hooks/useDimensions";
 import { NavStyle } from "./Styles/Nav.styled";
 
 const LogoStyle = styled.div`
@@ -34,6 +34,7 @@ const Nav = () => {
       
       <NavStyle winWidth={winWidth}>
         <div className="navbar">
+          <h1 className="username">Usergeneric&apos;s trails</h1>
           <div className="buttons">
             <div className="signing">
               <Link href="./Home">

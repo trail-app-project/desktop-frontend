@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import react, { useEffect, useRef } from 'react'
 
-import Footer from './Components/footer'
+import Footer from '../Components/footer'
 import Dashboard from './Dashboard/'
 import Home from './Home/'
 import Login from './Login/'

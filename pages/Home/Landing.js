@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Nav from '../Nav/';
+import Nav from '../../Components/Nav';
 
 import { gsap, Power3 } from "gsap";
 import background from '../../public/background.svg';
@@ -31,13 +31,7 @@ const Home = () => {
       <h1 className='title main' onMouseEnter={onEnter} onMouseLeave={onLeave}> Trail </h1>
       <h1 className='title back1' > Trail </h1>
       <h1 className='title back2' > Trail </h1>
-      <div className='background'>
-        <Image src={background} alt='background' className='background_img' ></Image>
-        {/* <Image src={bottom}     alt='bottom'     className='bottom'     ></Image>
-        <Image src={middle}     alt='middle'     className='middle'     ></Image>
-        <Image src={top}        alt='top'        className='top'        ></Image>
-        <Image src={clouds}     alt='clouds'     className='clouds'     ></Image> */}
-      </div>
+      <div className='background'/>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import Button from '../Components/Button';
+import Button from '../../Components/Button';
 
 const SignUp = () => {
   return (

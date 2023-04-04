@@ -1,26 +1,19 @@
 #home{
     width:100vh;
     height:100vw;
-		.background_img {
-			height: 100vh;
-			width: 100vw;
-			align-self: center;
-			display: flex;
-			position: absolute;
-			object-fit: cover;
-			z-index: 0;
-		}
-		.background.loggedin::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(253, 242, 222, 0.5); /* Transparent white */
-		}
 }
 
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../public/background.svg');
+    background-size: cover;
+    background-position: 0 0;
+    animation: slideBg 10s linear infinite;
+}
 
 .title.main{
     top: 4vh;
@@ -52,3 +45,14 @@
     display:block;
     color:var(--orange-dark);
 }
+
+
+
+@keyframes slideBg {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100vw 0;
+    }
+  }

@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../src/context/auth-context';
-import Nav from '../Nav/UserNav';
 import Dashboard from './Dashboard';
 const Index = () => {
   const router = useRouter();
@@ -18,7 +17,6 @@ const Index = () => {
   }, []);
   return (
     <>
-      <Nav />
       <Dashboard />
     </>
     

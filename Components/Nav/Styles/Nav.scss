@@ -1,8 +1,8 @@
 .navbar{
     display: flex;
     position: fixed;
+    align-items: center;
     z-index: 4;
-
     background-color: var(--contrast-color);
     height: 6rem;
     justify-content: right;
@@ -11,20 +11,21 @@
     &:hover{
         filter: drop-shadow(0  1.5rem 1rem rgba(0, 0, 0, .2)); 
     }
-    >div.buttons{
+
+    div.buttons{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: .6rem;
         margin-right: 3rem;
         align-self: center;
-        >div.signing{
+        div.signing{
             display: flex;
             gap: .5rem;
             flex-direction: row;
             align-items: center;
         }
-        >div.forgotpass{
+        div.forgotpass{
             display: flex;
         }
     }
