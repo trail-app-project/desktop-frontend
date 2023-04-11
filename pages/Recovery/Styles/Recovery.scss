@@ -1,0 +1,57 @@
+#password-recovery {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4C5C6B;
+    height: 100vh;
+    #box{
+        z-index: 0;
+        width: 25em;
+        height: 15em;
+        position: relative;
+        border-radius: 1em;
+        box-shadow: 0 0.188em 1.550em #36434e;
+        margin: 50px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        background-color: #FDF2DE;
+    }
+}
+
+.recovery-form{
+    margin: 50px;            
+    position: relative;
+    display:flex; 
+    flex-direction: column; 
+    justify-content:center; 
+    align-items:center;
+    .recovery-title{
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .email {
+        display: block;
+        margin: .5em;
+        height:2.5em;
+    }
+}
+
+.recover {
+    margin: .5em;
+}
+
+.invalid {
+    color: red;
+    display: block;
+}
+
+.valid {
+    display: none;
+}
+
+.valid.mail {
+    display: none;
+}
